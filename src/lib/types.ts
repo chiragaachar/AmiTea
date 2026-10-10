@@ -1,0 +1,33 @@
+export type Content = {
+  id: string;
+  title: string;
+  body: string;
+  category?: string;
+  alias: string;
+  created_at: string;
+  updated_at?: string;
+  votes: number;
+  comments?: number;
+  voted?: boolean;
+  saved?: boolean;
+  is_owner: boolean;
+  confession?: boolean;
+  locked?: boolean;
+  status?: string;
+  official_status?: string;
+  response?: string;
+  closes_at?: string | null;
+  selected_option?: string | null;
+  options?: { id: string; label: string; votes: number }[];
+};
+export type Comment = {
+  id: string;
+  post_id: string;
+  parent_id: string | null;
+  body: string;
+  alias: string;
+  created_at: string;
+  is_owner: boolean;
+  parent_preview: string | null;
+};
+export type ActionResult = { ok: boolean; message: string; id?: string };
